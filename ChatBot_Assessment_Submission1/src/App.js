@@ -1,4 +1,4 @@
-import ReactDOM from "react-dom";
+//import ReactDOM from "react-dom";
 import "./styles.css";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
@@ -39,7 +39,7 @@ class Review extends Component {
             </tr>
             <tr>
               <td>Age</td>
-              <td>{age.value}</td>
+              <td>{age.value} years old</td>
             </tr>
           </tbody>
         </table>
@@ -79,8 +79,8 @@ class SimpleForm extends Component {
           {
             id: "gender",
             options: [
-              { value: "male", label: "Male", trigger: "5" },
-              { value: "female", label: "Female", trigger: "5" }
+              { value: "Male", label: "Male", trigger: "5" },
+              { value: "Female", label: "Female", trigger: "5" }
             ]
           },
           {
@@ -137,7 +137,8 @@ class SimpleForm extends Component {
             options: [
               { value: "name", label: "Name", trigger: "update-name" },
               { value: "gender", label: "Gender", trigger: "update-gender" },
-              { value: "age", label: "Age", trigger: "update-age" }
+              { value: "age", label: "Age", trigger: "update-age" },
+              { value: "no updates", label: "None", trigger: "end-message" }
             ]
           },
           {
@@ -167,6 +168,3 @@ class SimpleForm extends Component {
 }
 
 export default SimpleForm;
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<SimpleForm />, rootElement);
